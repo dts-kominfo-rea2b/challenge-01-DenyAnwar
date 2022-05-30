@@ -26,6 +26,8 @@ monicaFavoriteResto.add("Tteok");
 monicaFavoriteResto.add("Sushi");
 monicaFavoriteResto.add("Sushi");
 
+let monicaUniqueResto = [...new Set(monicaFavoriteResto)];
+
 let wendyFavoriteResto = new Set();
 wendyFavoriteResto.add("Tempura");
 wendyFavoriteResto.add("Bento");
@@ -37,6 +39,8 @@ wendyFavoriteResto.add("Geprek");
 wendyFavoriteResto.add("Pancake");
 wendyFavoriteResto.add("Eggy");
 
+let wendyUniqueResto = [...new Set(wendyFavoriteResto)];
+
 const firstUser = {
   name: "Monica",
   gender: "Female",
@@ -45,7 +49,7 @@ const firstUser = {
   favoriteColor: monicaColors,
   isHavePet: true,  
   education: education.get('monica'),
-  favoriteRestaurant: monicaFavoriteResto,
+  favoriteRestaurant: monicaUniqueResto,
 }
 
 const secondUser = {
@@ -56,7 +60,7 @@ const secondUser = {
   favoriteColor: wendyColors,
   isHavePet: false,
   education: education.get('wendy'),
-  favoriteRestaurant: wendyFavoriteResto,
+  favoriteRestaurant: wendyUniqueResto,
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
